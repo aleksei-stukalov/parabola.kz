@@ -1,0 +1,70 @@
+@import './variables';
+
+#hero {
+	z-index: 1;
+
+	position: relative;
+
+	flex-direction: column;
+	overflow: hidden;
+
+	background-color: $color-dark;
+
+	&::after {
+		z-index: 2;
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		content: '';
+
+		opacity: .2;
+		background-color: $color-orange;
+	}
+
+	#hero__logo {
+		z-index: 3;
+
+		position: relative;
+		width: 40rem;
+		padding: 8rem;
+	}
+
+	#hero__descro {
+		z-index: 3;
+
+		position: relative;
+
+		letter-spacing: .2rem;
+		text-transform: uppercase;
+
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.4rem;
+
+		> span {
+			padding: 0 .5rem;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			letter-spacing: .6rem;
+
+			line-height: 2rem;
+		}
+	}
+
+	#hero__video {
+		z-index: 1;
+
+		position: fixed;
+		top: 0;
+		width: auto;
+		min-width: 100vw;
+		height: auto;
+
+		transition: 0s;
+	}
+}

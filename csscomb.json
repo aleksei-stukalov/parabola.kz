@@ -4,31 +4,31 @@
 	"quotes": "single",
 	"color-case": "lower",
 	"color-shorthand": false,
-
 	"lines-between-rulesets": 1,
 	"space-between-declarations": "\n",
 	"space-before-closing-brace": "\n",
-
-	"exclude": [".git/**", "node_modules/**", "bower_components/**"],
+	"exclude": [
+		".git/**",
+		"node_modules/**",
+		"bower_components/**"
+	],
 	"sort-order": [
-		["z-index"],
+		[
+			"z-index"
+		],
 		[
 			"position",
-
 			"top",
 			"right",
 			"bottom",
 			"left",
-
 			"box-sizing",
-
 			"width",
 			"min-width",
 			"max-width",
 			"height",
 			"min-height",
 			"max-height",
-
 			"margin",
 			"margin-top",
 			"margin-right",
@@ -42,32 +42,25 @@
 		],
 		[
 			"visibility",
-
 			"display",
 			"flex",
 			"flex-wrap",
-
 			"flex-direction",
 			"justify-content",
 			"align-items",
 			"align-content",
-
 			"align-self",
-
 			"flex-grow",
 			"flex-shrink",
 			"flex-flow",
 			"flex-basis",
-
 			"float",
 			"clear",
 			"overflow",
 			"overflow-x",
 			"overflow-y",
-
 			"clip",
 			"zoom",
-
 			"order"
 		],
 		[

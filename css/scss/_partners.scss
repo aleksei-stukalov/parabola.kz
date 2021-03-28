@@ -1,0 +1,271 @@
+@import './variables';
+
+#partners {
+	z-index: 5;
+
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	background-color: $color-dark;
+
+	@media screen and (min-width: 1600px) {
+		padding-bottom: 4rem;
+	}
+
+	.partner__logo {
+		width: 120px;
+		height: 120px;
+		margin: 1rem 4rem;
+		padding: 1rem;
+
+		transition: .2s;
+
+		opacity: .5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	> span {
+		width: 100%;
+	}
+}
+
+#contacts {
+	z-index: 6;
+
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 60px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(../../media/img/contacts-map.png);
+
+	&::before {
+		z-index: 2;
+
+		position: absolute;
+		right: 0;
+		width: 40%;
+		height: 100%;
+
+		content: '';
+
+		background-color: rgba($color-bright, $alpha: .7);
+	}
+
+	> #map {
+		z-index: 1;
+
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&::before {
+			z-index: 1;
+
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			content: '';
+
+			opacity: 0;
+		}
+	}
+
+	> #map__contacts {
+		z-index: 4;
+
+		position: absolute;
+		padding: 2rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+
+		transform: translate(-15rem, 10rem);
+
+		border: solid 2px $color-gray;
+		background-color: rgba($color-bright, .7);
+
+		> h1 {
+			margin: .3rem 0;
+
+			color: $color-gray;
+
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+		> h2 {
+			margin-bottom: 1rem;
+
+			color: $color-gray;
+
+			font-size: 1.2rem;
+			font-weight: 300;
+		}
+	}
+
+	> #contacts__form {
+		z-index: 3;
+
+		position: absolute;
+		right: 0;
+		width: 40%;
+		min-width: 550px;
+		height: 100%;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		#form__submit {
+			z-index: 3;
+
+			position: relative;
+			margin-top: 1rem;
+			padding: 1rem 4rem;
+
+			cursor: pointer;
+			letter-spacing: .1rem;
+			text-transform: uppercase;
+
+			color: $color-bright;
+			background: linear-gradient(15deg, $color-red, $color-orange);
+
+			font-family: $main-font-family;
+			font-size: 1rem;
+			font-weight: 400;
+
+			&::before {
+				z-index: 1;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				content: '';
+				transition: .2s;
+
+				opacity: 0;
+				background-color: rgba($color-bright, $alpha: 1);
+			}
+
+			&:hover {
+				background: linear-gradient(15deg, $color-red, $color-orange);
+
+				&::before {
+					opacity: .2;
+				}
+			}
+		}
+
+		> span {
+			width: 100%;
+		}
+
+		> .form__input {
+			position: relative;
+			width: 500px;
+			height: auto;
+			margin-bottom: 2rem;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+
+			&:nth-of-type(1) {
+				width: 263px;
+				margin-right: 7px;
+			}
+
+			&:nth-of-type(2) {
+				width: 223px;
+				margin-left: 7px;
+
+				> div {
+					background: linear-gradient(15deg, $color-red, $color-orange);
+				}
+			}
+
+			&:nth-of-type(3) {
+				> div {
+					height: 250px;
+
+					> .input__field {
+						resize: none;
+						white-space: pre-wrap;
+					}
+				}
+			}
+
+			> h1 {
+				z-index: 3;
+
+				margin-bottom: .5rem;
+				margin-left: 10px;
+
+				letter-spacing: .06rem;
+				text-transform: uppercase;
+
+				color: $color-gray;
+
+				font-size: 1rem;
+				font-weight: 400;
+			}
+
+			> div {
+				z-index: 1;
+
+				position: relative;
+				width: 100%;
+				height: 44px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				background: linear-gradient(220deg, $color-red, $color-orange);
+
+				> .input__field {
+					z-index: 2;
+
+					position: absolute;
+					width: calc(100% - 24px);
+					height: calc(100% - 24px);
+					padding: 10px;
+
+					color: $color-gray;
+					background-color: white;
+
+					font-family: $main-font-family;
+					font-size: 1.2rem;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
