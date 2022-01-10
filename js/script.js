@@ -88,8 +88,3 @@ topSectionVideosArray.forEach((element) => {
   element.addEventListener('canplaythrough', _videoPlaySynched);
   element.addEventListener('ended', _videoPlaySynched);
 });
-
-const tester = 'my string';
-for (let i = 0; i <= 10; i++) {
-  document.querySelector('#daddy').innerHTML += `<h1 onclick='myFunction("${tester}")'>${tester}</h1>`
-}
