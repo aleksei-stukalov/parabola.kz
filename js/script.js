@@ -1,6 +1,7 @@
 const w = window, d = document;
 
-const navContainer = d.querySelector('#navigation'),
+const
+  navContainer = d.querySelector('#navigation'),
   navLinks = d.querySelector('#navigation__links'),
   navLinksArray = Array.from(navLinks.querySelectorAll('.navigation__link')),
   heroLogo = d.querySelector('#hero__logo'),
