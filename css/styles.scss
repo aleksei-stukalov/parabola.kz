@@ -97,6 +97,8 @@ a:active {
 
   background-color: $color-dark;
 
+
+
   > h1 {
     padding: 0.2rem;
 
@@ -104,5 +106,9 @@ a:active {
 
     font-size: 0.9rem;
     font-weight: 400;
+	
+	@media screen and (max-width: 768px) {
+		text-wrap: wrap;
+	  }
   }
 }

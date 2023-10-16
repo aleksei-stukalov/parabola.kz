@@ -53,6 +53,11 @@
 
 	background-image: url(../../media/img/contacts-map.png);
 
+	@media screen and (max-width: 768px) {
+		display: none;
+		
+	}
+
 	&::before {
 		z-index: 2;
 
