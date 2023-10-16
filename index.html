@@ -1,295 +1,437 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Parabola Media Agency</title>
+  </head>
 
-<head>
-	<meta charset='utf-8' />
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1' />
-	<link rel='stylesheet' href='css/styles.css'>
-	<title>Parabola Media Agency</title>
-</head>
+  <body>
+    <nav id="navigation">
+      <img
+        id="navigation__logo"
+        src="svg/parabola-logo.svg"
+        width="200"
+        alt="Parabola Media Logo"
+      />
+      <ul id="navigation__links">
+        <li><a class="navigation__link" href="#main__hero">Home</a></li>
+        <li><a class="navigation__link" href="#main__service">Services</a></li>
+        <li><a class="navigation__link" href="#main__team">Why Us</a></li>
+        <li><a class="navigation__link" href="#main__cases">Portfolio</a></li>
+        <li><a class="navigation__link" href="#main__partners">Partners</a></li>
+        <li><a class="navigation__link" href="#main__contacts">Contacts</a></li>
+      </ul>
+      <p id="navigation__phone">+64 (0)20<span>4142 1042</span></p>
+    </nav>
 
-<body>
-	<nav id="navigation">
-		<a id="navigation__logo" href="#"><img src="svg/parabola-logo.svg" /></a>
-		<section id="navigation__links">
-			<a class="navigation__link" href="#main__hero">Главная</a>
-			<a class="navigation__link" href="#main__service">Услуги</a>
-			<a class="navigation__link" href="#main__team">Почему Мы</a>
-			<a class="navigation__link" href="#main__cases">Кейсы</a>
-			<a class="navigation__link" href="#main__partners">Партнеры</a>
-			<a class="navigation__link" href="#main__contacts">Консультация</a>
-		</section>
-		<p id="navigation__phone-number">+7(707)<span>147-79-21</span></p>
-	</nav>
+    <main id="main" class="flexed">
+      <section id="hero" class="flexed bigged">
+        <video id="hero__video" autoplay="true" muted preload="auto">
+          <source src="media/video/liquid.webm" type="video/webm" />
+        </video>
+        <img id="hero__logo" src="./svg/parabola-logo.svg" alt="" />
+        <p id="hero__descro" class="flexed">
+          <span>Designн</span>
+          <span>Development</span>
+          <span>Marketing</span>
+        </p>
+      </section>
 
-	<main id='main' class='flexed' >
+      <section id="service" class="bigged">
+        <div class="service__card">
+          <div class="card__icon">
+            <img
+              class="card__img-clr"
+              src="./svg/icons/marketing_colored.svg"
+              alt="Marketing Icon"
+              width="120"
+            />
+            <img
+              class="card__img-bw"
+              src="./svg/icons/marketing_outlined.svg"
+              alt="Marketing Icon"
+              width="120"
+            />
+          </div>
+          <h3 class="card__title">Marketing</h3>
+          <ul class="card__list">
+            <li>SEO optimisation</li>
+            <li>E-mail marketing</li>
+            <li>Social media marketing</li>
+            <li>Website audit</li>
+          </ul>
+          <!-- <a href="#" class="card_link">Подробнее</a> -->
+        </div>
 
-		<section id='hero' class='flexed bigged'>
-			<video id='hero__video' autoplay='true' muted preload='auto'>
-				<source src='media/video/liquid.webm' type='video/webm' />
-			</video>
-			<img id='hero__logo' src='./svg/parabola-logo.svg' alt="" />
-			<p id='hero__descro' class='flexed'>
-				<span>Веб-Дизайн</span>
-				<span>Разработка</span>
-				<span>SEO-Оптимизация</span>
-			</p>
-		</section>
+        <div class="service__card">
+          <div class="card__icon">
+            <img
+              class="card__img-clr"
+              src="./svg/icons/onlineAdvertisement_colored.svg"
+              alt="Advertisment Icon"
+              width="120"
+            />
+            <img
+              class="card__img-bw"
+              src="./svg/icons/onlineAdvertisement_outlined.svg"
+              alt="Advertisment Icon"
+              width="120"
+            />
+          </div>
+          <h3 class="card__title">Advertisment</h3>
+          <ul class="card__list">
+            <li>Context advertisment</li>
+            <li>Media advertisment</li>
+            <li>Target marketing</li>
+            <li>Focus group study</li>
+          </ul>
+          <!-- <a href="#" class="card_link">Подробнее</a> -->
+        </div>
 
-		<section id='service' class='bigged'>
-			<video id='service__video' muted preload='auto'>
-				<source src='media/video/service-liquid.webm' type='video/webm' />
-			</video>
+        <div class="service__card">
+          <div class="card__icon">
+            <img
+              class="card__img-clr"
+              src="./svg/icons/creative_colored.svg"
+              alt="Creative Design Icon"
+              width="120"
+            />
+            <img
+              class="card__img-bw"
+              src="./svg/icons/creative_outlined.svg"
+              alt="Creative Design Icon"
+              width="120"
+            />
+          </div>
+          <h3 class="card__title">Design</h3>
+          <ul class="card__list">
+            <li>Graphic design</li>
+            <li>User Interface design</li>
+            <li>Website design</li>
+            <li>Printing design</li>
+            <li>Infographics</li>
+          </ul>
+          <!-- <a href="#" class="card_link">Подробнее</a> -->
+        </div>
 
-			<div class='service__card'>
-				<img class='card_img-clr' src='./svg/icons/marketing_colored.svg' alt="" />
-				<img class='card_img-bw' src='./svg/icons/marketing_outlined.svg' alt="" />
-				<h1 class='card_title'>Интернет Маркетинг</h1>
-				<ul class='card_list'>
-					<li>Поисковая оптимизация сайта</li>
-					<li>E-mail маркетинг</li>
-					<li>Аудит сайта</li>
-					<li>Маркетинг в социальных сетях (SMM)</li>
-					<li>Комплексный интернет-маркетинг</li>
-				</ul>
-				<a href="#" class='card_link'>Подробнее</a>
-			</div>
+        <div class="service__card">
+          <div class="card__icon">
+            <img
+              class="card__img-clr"
+              src="./svg/icons/development_colored.svg"
+              alt="Development Icon"
+              width="120"
+            />
+            <img
+              class="card__img-bw"
+              src="./svg/icons/development_outlined.svg"
+              alt="Development Icon"
+              width="120"
+            />
+          </div>
+          <h3 class="card__title">Development</h3>
+          <ul class="card__list">
+            <li>Eccomerce shops</li>
+            <li>Corporate websites</li>
+            <li>Landing pages</li>
+            <li>Promo websites</li>
+          </ul>
+          <!-- <a href="#" class="card_link">Подробнее</a> -->
+        </div>
+      </section>
 
-			<div class='service__card'>
-				<img class='card_img-clr' src='./svg/icons/onlineAdvertisement_colored.svg' alt="" />
-				<img class='card_img-bw' src='./svg/icons/onlineAdvertisement_outlined.svg' alt="" />
-				<h1 class='card_title'>Реклама в интернете</h1>
-				<ul class='card_list'>
-					<li>Контекстная реклама</li>
-					<li>Медийная (баннерная) реклама</li>
-					<li>Таргетированная реклама</li>
-					<li>Продающие текста</li>
-					<li>Работа с Целевой аудиторией</li>
-				</ul>
-				<a href="#" class='card_link'>Подробнее</a>
-			</div>
+      <section id="team" class="flexed">
+        <header id="team__header">
+          <section id="team__forground">
+            <figure class="team__card team__card-toggled">
+              <h1 class="card__count">1</h1>
+              <h2 class="card__headline">Team</h2>
+              <p class="card__descro">
+                Parabola Media Agency comprises a distinguished assembly of
+                globally certified digital marketing experts, characterized by
+                their first-rate professional capabilities.
+              </p>
+            </figure>
+            <figure class="team__card">
+              <h1 class="card__count">2</h1>
+              <h2 class="card__headline">Analytics</h2>
+              <p class="card__descro">
+                We possess the capability to proficiently integrate and leverage
+                analytics across all phases of our operations, thereby enhancing
+                the efficiency and impact of advertising campaigns.
+              </p>
+            </figure>
+            <figure class="team__card">
+              <h1 class="card__count">3</h1>
+              <h2 class="card__headline">Progress</h2>
+              <p class="card__descro">
+                We employ transparent and comprehensible operational mechanisms,
+                ensuring weekly campaign corrections, as each error can bear
+                critical consequences.
+              </p>
+            </figure>
+            <figure class="team__card">
+              <h1 class="card__count">4</h1>
+              <h2 class="card__headline">Expirience</h2>
+              <p class="card__descro">
+                At Parabola Media Agency, we have successfully collaborated on
+                over 100 major advertising campaigns. Our primary objective is
+                to facilitate your market development and establishment as a
+                dominant presence.
+              </p>
+            </figure>
+          </section>
+          <section id="team__background">
+            <img
+              class="background__card show"
+              src="./media/img/card-team.jpg"
+              alt="Team Image"
+            />
+            <img
+              class="background__card"
+              src="./media/img/card-analitics.jpg"
+              alt="Analytics Image"
+            />
+            <img
+              class="background__card"
+              src="./media/img/card-progress.jpg"
+              alt="Progress Image"
+            />
+            <img
+              class="background__card"
+              src="./media/img/card-expirience.jpg"
+              alt="Expirience Image"
+            />
+          </section>
+        </header>
 
-			<div class='service__card'>
-				<img class='card_img-clr' src='./svg/icons/creative_colored.svg' alt="" />
-				<img class='card_img-bw' src='./svg/icons/creative_outlined.svg' alt="" />
-				<h1 class='card_title'>Дизайн и креатив</h1>
-				<ul class='card_list'>
-					<li>Графический дизайн</li>
-					<li>Дизайн интерфейсов</li>
-					<li>Дизайн сайта</li>
-					<li>Инфографика</li>
-					<li>Полиграфический дизайн</li>
-				</ul>
-				<a href="#" class='card_link'>Подробнее</a>
-			</div>
+        <section id="team__content">
+          <figure id="team__world">
+            <img src="./svg/world-map.svg" alt="" />
+            <div class="team__statement">
+              <h1>Internation Expirience</h1>
+              <p>
+                We stand as one of the foremost marketing firms, boasting a
+                global presence with representative offices in countries
+                including the USA, New Zealand, Russia, and Kazakhstan. While
+                bringing your business online has become increasingly
+                straightforward, achieving success in the digital realm presents
+                a distinct challenge. If you require distinctive internet
+                marketing solutions, online advertising expertise, strategic
+                social media promotion, conversion-focused search engine
+                optimization, and a comprehensive marketing plan and strategy,
+                we are well-equipped to deliver these services.
+              </p>
+            </div>
+          </figure>
+          <div class="team__feedback">
+            <figure class="team__feedback_card">
+              <p>
+                “We highly appreciate your creative yet methodical
+                problem-solving approach, coupled with your capacity to actively
+                engage with clients and discern the requirements of the target
+                audience.”
+              </p>
+              <span></span>
+              <img
+                class="team__feedback-red"
+                src="./svg/logos/logo-mercur-red.svg"
+              />
+              <img
+                class="team__feedback-gray"
+                src="./svg/logos/logo-mercur-gray.svg"
+              />
+              <h2>Калижанов А.И., “MERCUR AUTO LTD” г. Атырау</h2>
+            </figure>
+            <figure class="team__feedback_card">
+              <p>
+                “Выражаем вашей компании благодарность и признательность за
+                продуктивное сотрудничество... с Вашей помощью, мы смогли
+                привлечь новых покупателей, расширили рынок сбыта...”
+              </p>
+              <span></span>
+              <img
+                class="team__feedback-red"
+                src="./svg/logos/logo-porsche-red.svg"
+              />
+              <img
+                class="team__feedback-gray"
+                src="./svg/logos/logo-porsche-gray.svg"
+              />
+              <h2>Бейдали Р. М., “PORSCHE CENTER ALMATY” г. Алматы</h2>
+            </figure>
+          </div>
+        </section>
+      </section>
 
-			<div class='service__card'>
-				<img class='card_img-clr' src='./svg/icons/development_colored.svg' alt="" />
-				<img class='card_img-bw' src='./svg/icons/development_outlined.svg' alt="" />
-				<h1 class='card_title'>Разработка сайтов</h1>
-				<ul class='card_list'>
-					<li>Интернет-магазин</li>
-					<li>Корпоративный сайт</li>
-					<li>Сайт-витрина</li>
-					<li>Промо-сайт</li>
-					<li>Landing page</li>
-				</ul>
-				<a href="#" class='card_link'>Подробнее</a>
-			</div>
-		</section>
+      <section id="cases">
+        <a class="case__example">
+          <img src="./media/img/cases-kusokshokolada-logo.png" alt="" />
+          <h1>Кусок Шоколада</h1>
+          <h2>Лого</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-bishkeklowcars-brand.png" alt="" />
+          <h1>Bishkek Low Cars</h1>
+          <h2>Промо материал</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-bigroup-website.png" alt="" />
+          <h1>BI Group</h1>
+          <h2>Лендинг страница</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-favory-logo.png" alt="" />
+          <h1>Favory</h1>
+          <h2>Интернет магазин</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-florida-logo.png" alt="" />
+          <h1>Florida Fitness Club</h1>
+          <h2>Брендинг</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-volkswagen-website.png" alt="" />
+          <h1>VolksWagen</h1>
+          <h2>Веб-сайт</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-kusokshokolada-logo.png" alt="" />
+          <h1>Кусок Шоколада</h1>
+          <h2>Лого</h2>
+        </a>
+        <a class="case__example">
+          <img src="./media/img/cases-hazet-shop.png" alt="" />
+          <h1>Hazet</h1>
+          <h2>Интернет магазин</h2>
+        </a>
+      </section>
 
-		<section id='team' class='flexed'>
+      <section id="partners">
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-porsche.svg"
+          alt="Porsche"
+        />
+        <img class="partner__logo" src="./svg/logos/logo-audi.svg" alt="Audi" />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-volkswagen.svg"
+          alt="Volkswagen"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-vigor.svg"
+          alt="Vigor"
+        />
+        <span></span>
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-hazet.svg"
+          alt="Hazet"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-bi-group.svg"
+          alt="BI-group"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-favory.svg"
+          alt="Favory"
+        />
+        <span></span>
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-roberto-bravo.svg"
+          alt="Roberto-Bravo"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-mercur.svg"
+          alt="Mercur"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-world-class.svg"
+          alt="World-Class"
+        />
+        <img
+          class="partner__logo"
+          src="./svg/logos/logo-voxball.svg"
+          alt="Voxball"
+        />
+      </section>
 
-			<header id='team__header'>
-				<section id='team__forground'>
-					<figure class='team__card team__card-toggled'>
-						<h1 class='card__count'>1</h1>
-						<h1 class='card__count card__count-alt'>1</h1>
-						<h2 class='card__headline'>Команда</h2>
-						<p class='card__descro'>
-							Parabola Media Agency - это команда первоклассных профессионалов и сертифицированных специалистов
-							digital-рынка со всего мира.
-						</p>
-					</figure>
-					<figure class='team__card'>
-						<h1 class='card__count'>2</h1>
-						<h1 class='card__count card__count-alt'>2</h1>
-						<h2 class='card__headline'>Аналитика</h2>
-						<p class='card__descro'>
-							Умеем внедрять и пользоваться аналитикой на всех этапах работы для кратного повышения эффективности
-							рекламных кампаний.
-						</p>
-					</figure>
-					<figure class='team__card'>
-						<h1 class='card__count'>3</h1>
-						<h1 class='card__count card__count-alt'>3</h1>
-						<h2 class='card__headline'>Прогресс</h2>
-						<p class='card__descro'>
-							Используем прозрачные и понятные механизмы работы. Корректируем кампанию еженедельно, так как каждая
-							ошибка
-							может быть фатальной.
-						</p>
-					</figure>
-					<figure class='team__card'>
-						<h1 class=' card__count'>4</h1>
-						<h1 class='card__count card__count-alt'>4</h1>
-						<h2 class='card__headline'>Опыт</h2>
-						<p class='card__descro'>
-							В Parabola Media Agency мы уже проработали более 100 крупных успешных рекламных кампаний. Наша цель помочь
-							Вам развиваться и доминировать на рынке.
-						</p>
-					</figure>
-				</section>
-				<section id='team__background'>
-					<div class='background__card selected__team show'></div>
-					<div class='background__card selected__analitics '></div>
-					<div class='background__card selected__progress '></div>
-					<div class='background__card selected__expirience '></div>
-				</section>
-			</header>
-
-			<section id='team__content'>
-				<figure id="team__world">
-					<img src="./svg/world-map.svg" alt="" />
-					<article>
-						<h1>Международный Опыт</h1>
-						<p>
-							Мы являемся одной из самых эффективных маркетинговых компаний, со своими представительствами в таких
-							странах как: США, Новая Зеландия, Россия и Казахстан. Вывести свой бизнес на онлайн площадку просто как
-							никогда, но сделать бизнес успешным - это другая история. Вам нужно уникальные интернет маркетинговые
-							решения, онлайн-реклама, продвижение в социальных сетях, и поисковая оптимизация, основанные на конверсии,
-							в сочетании с маркетинговым планом и стратегией.
-						</p>
-					</article>
-				</figure>
-				<figure class="team__feedback">
-					<p>
-						“Нам очень понравился Ваш креативный и одновременно рациональный подход к решению поставленных задач, умение
-						выслушать клиента и понять потребности целевой аудитории.”
-					</p>
-					<span></span>
-					<img class="team__feedback-red" src="./svg/logos/logo-mercur-red.svg" />
-					<img class="team__feedback-gray" src="./svg/logos/logo-mercur-gray.svg" />
-					<h2>Калижанов А.И., “MERCUR AUTO LTD” г. Атырау</h2>
-				</figure>
-				<figure class="team__feedback">
-					<p>
-						“Выражаем вашей компании благодарность и признательность за продуктивное сотрудничество... с Вашей помощью,
-						мы смогли привлечь новых покупателей, расширили рынок сбыта...”
-					</p>
-					<span></span>
-					<img class="team__feedback-red" src="./svg/logos/logo-porsche-red.svg" />
-					<img class="team__feedback-gray" src="./svg/logos/logo-porsche-gray.svg" />
-					<h2>Бейдали Р. М., “PORSCHE CENTER ALMATY” г. Алматы</h2>
-				</figure>
-			</section>
-
-		</section>
-
-		<section id="cases">
-			<a class="case__example">
-				<img src="./media/img/cases-kusokshokolada-logo.png" alt="" />
-				<h1>Кусок Шоколада</h1>
-				<h2>Лого</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-bishkeklowcars-brand.png" alt="" />
-				<h1>Bishkek Low Cars</h1>
-				<h2>Промо материал</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-bigroup-website.png" alt="" />
-				<h1>BI Group</h1>
-				<h2>Лендинг страница</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-favory-logo.png" alt="" />
-				<h1>Favory</h1>
-				<h2>Интернет магазин</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-florida-logo.png" alt="" />
-				<h1>Florida Fitness Club</h1>
-				<h2>Брендинг</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-volkswagen-website.png" alt="" />
-				<h1>VolksWagen</h1>
-				<h2>Веб-сайт</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-kusokshokolada-logo.png" alt="" />
-				<h1>Кусок Шоколада</h1>
-				<h2>Лого</h2>
-			</a>
-			<a class="case__example">
-				<img src="./media/img/cases-hazet-shop.png" alt="" />
-				<h1>Hazet</h1>
-				<h2>Интернет магазин</h2>
-			</a>
-		</section>
-
-		<section id="partners">
-			<img class="partner__logo" src="./svg/logos/logo-porsche.svg" alt="Porsche" />
-			<img class="partner__logo" src="./svg/logos/logo-audi.svg" alt="Audi" />
-			<img class="partner__logo" src="./svg/logos/logo-volkswagen.svg" alt="Volkswagen" />
-			<img class="partner__logo" src="./svg/logos/logo-vigor.svg" alt="Vigor" />
-			<span></span>
-			<img class="partner__logo" src="./svg/logos/logo-hazet.svg" alt="Hazet" />
-			<img class="partner__logo" src="./svg/logos/logo-bi-group.svg" alt="BI-group" />
-			<img class="partner__logo" src="./svg/logos/logo-favory.svg" alt="Favory" />
-			<span></span>
-			<img class="partner__logo" src="./svg/logos/logo-roberto-bravo.svg" alt="Roberto-Bravo" />
-			<img class="partner__logo" src="./svg/logos/logo-mercur.svg" alt="Mercur" />
-			<img class="partner__logo" src="./svg/logos/logo-world-class.svg" alt="World-Class" />
-			<img class="partner__logo" src="./svg/logos/logo-voxball.svg" alt="Voxball" />
-		</section>
-
-		<section id='contacts'>
-			<div id="map__contacts">
-				<div id='daddy' style='
-				position: absolute;
-				top: 50px;
-				width: 100%;
-				height: 100%;
-				background-color: white;
-				color: black;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				'>
-
-				</div>
-				<h1>Адрес</h1>
-				<h2>пр. Назарбаева 152б г.Алматы, Казахстан</h2>
-				<h1>Телефон</h1>
-				<h2>+7(707) 147-79-21</h2>
-				<h1>E-mail</h1>
-				<h2>info@parabola.kz</h2>
-			</div>
-			<form id="contacts__form" method="POST">
-				<label class="form__input">
-					<h1>Ваше Имя</h1>
-					<div>
-						<input maxlength="19" class="input__field" name="name" type="text" required />
-					</div>
-				</label>
-				<label class="form__input">
-					<h1>Телефон</h1>
-					<div>
-						<input maxlength="18" class="input__field" name="phone" type="text" required />
-					</div>
-				</label>
-				<span></span>
-				<label class="form__input">
-					<h1>Комментарий</h1>
-					<div>
-						<textarea maxlength="1000" class="input__field" name="comment" type="textarea" required></textarea>
-					</div>
-				</label>
-				<span></span>
-				<button id="form__submit" name='send' type="submit">Отправить</button>
-				<?php
+      <section id="contacts">
+        <div id="map__contacts">
+          <div
+            id="daddy"
+            style="
+              position: absolute;
+              top: 50px;
+              width: 100%;
+              height: 100%;
+              background-color: white;
+              color: black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          ></div>
+          <h1>Адрес</h1>
+          <h2>пр. Назарбаева 152б г.Алматы, Казахстан</h2>
+          <h1>Телефон</h1>
+          <h2>+7(707) 147-79-21</h2>
+          <h1>E-mail</h1>
+          <h2>info@parabola.kz</h2>
+        </div>
+        <form id="contacts__form" method="POST">
+          <label class="form__input">
+            <h1>Ваше Имя</h1>
+            <div>
+              <input
+                maxlength="19"
+                class="input__field"
+                name="name"
+                type="text"
+                required
+              />
+            </div>
+          </label>
+          <label class="form__input">
+            <h1>Телефон</h1>
+            <div>
+              <input
+                maxlength="18"
+                class="input__field"
+                name="phone"
+                type="text"
+                required
+              />
+            </div>
+          </label>
+          <span></span>
+          <label class="form__input">
+            <h1>Комментарий</h1>
+            <div>
+              <textarea
+                maxlength="1000"
+                class="input__field"
+                name="comment"
+                type="textarea"
+                required
+              ></textarea>
+            </div>
+          </label>
+          <span></span>
+          <button id="form__submit" name="send" type="submit">Отправить</button>
+          <?php
 				if (isset($_POST['send'])) {
 					$name = $_POST['name'];
 					$phone = $_POST['phone'];
@@ -305,14 +447,12 @@
 					mail($to, $subject, $message, $headers);
 				}
 				?>
-			</form>
-		</section>
-
-	</main>
-	<footer id="footer">
-		<h1>Дизайн и разработка от Alek Groove при Parabola Media Agency</h1>
-	</footer>
-	<script src="js/script.js"></script>
-</body>
-
+        </form>
+      </section>
+    </main>
+    <footer id="footer">
+      <h1>Дизайн и разработка от Alek Groove при Parabola Media Agency</h1>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>

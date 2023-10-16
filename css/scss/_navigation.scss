@@ -1,104 +1,67 @@
-@import './variables';
+@import "./variables";
 
 #navigation {
-	z-index: 200;
+  --height: 60px;
 
-	position: fixed;
-	top: -60px;
-	width: 100%;
-	height: 60px;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  top: calc(-1 * var(--height));
+  width: 100%;
+  height: var(--height);
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-	transition: .2s;
-	animation: gradient-animation 5s ease infinite;
+  transition: 0.2s;
+  animation: gradient-animation 5s ease infinite;
 
-	background: linear-gradient(220deg, $color-red, $color-orange);
-	background-size: 400% 400%;
+  background: linear-gradient(220deg, $color-red, $color-orange);
+  background-size: 400% 400%;
 
-	#navigation__logo {
-		z-index: 1;
+  &.dropped {
+    top: 0;
+  }
 
-		height: 100%;
-		margin-left: 2rem;
-		padding: 0 1em;
+  #navigation__logo {
+    margin-left: 3rem;
+    width: 200px;
+    height: 50px;
+  }
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  #navigation__links {
+    position: fixed;
+    height: var(--height);
+    left: 50%;
 
-		transition: .2s;
+    display: flex;
 
-		> img {
-			width: 200px;
-			height: 50px;
-		}
-	}
+    transition: 0;
+    transform: translate(-50%, 0);
 
-	> #navigation__links {
-		z-index: 1;
+    .navigation__link {
+      height: 100%;
+      padding-inline: 1.5rem;
 
-		position: relative;
-		top: 100px;
-		height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+      letter-spacing: 0.06rem;
+      text-transform: uppercase;
 
-		transition: 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
 
-		.navigation__link {
-			height: 100%;
-			padding: 0 1.5rem;
-
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			cursor: pointer;
-			white-space: nowrap;
-			letter-spacing: .06rem;
-			text-transform: uppercase;
-
-			font-size: .8rem;
-			font-weight: 500;
-		}
-
-		> span {
-			width: 4px;
-			height: 4px;
-			margin: 1rem 2rem;
-
-			display: inline-block;
-
-			border-radius: 50%;
-			background-color: $color-bright;
-		}
-	}
-
-	#navigation__phone-number {
-		z-index: 503;
-
-		height: 100%;
-		margin-right: 2.5rem;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		transition: .2s;
-
-		opacity: 1;
-		color: $color-bright;
-
-		font-size: 1.4rem;
-		font-weight: 300;
-
-		> span {
-			padding-left: .5rem;
-		}
-	}
+  #navigation__phone {
+    margin-right: 3rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    > span {
+      padding-left: 0.5rem;
+    }
+  }
 }

@@ -1,143 +1,139 @@
-@import './variables';
-
-#service__video {
-	z-index: 1;
-
-	position: absolute;
-	top: 0;
-	width: auto;
-	min-width: 100vw;
-	height: auto;
-}
+@import "./variables";
 
 #service {
-	z-index: 2;
+  z-index: 2;
 
-	position: relative;
-	height: calc(100vh - 60px);
+  position: relative;
+  height: calc(100vh - 60px);
 
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
 
-	background-color: #ffffff98;
+  overflow: hidden;
 
-	scroll-margin: 60px;
+  backdrop-filter: grayscale(100%) invert(100%);
 
-	.service__card {
-		z-index: 2;
+  scroll-margin: 60px;
 
-		position: relative;
-		width: 20rem;
-		height: auto;
-		margin: 3rem;
-		padding: 2rem 1rem;
+  .service__card {
+    z-index: 2;
 
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		overflow: hidden;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    padding: 3rem 2rem;
 
-		cursor: pointer;
-		transition: .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    overflow: hidden;
+    border-radius: 6px;
+    
+    text-align: center;
+    color: $color-dark;
+    background-color: rgba($color: $color-bright, $alpha: 1);
 
-		color: $color-dark;
-		background-color: rgba($color: $color-bright, $alpha: 1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
 
-		&::before {
-			z-index: 1;
+    &::before {
+      content: "";
+      z-index: 1;
 
-			position: absolute;
-			top: -1rem;
-			right: -1rem;
-			bottom: -1rem;
-			left: -1rem;
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+      bottom: 0rem;
+      left: 0rem;
 
-			content: '';
-			transition: .2s;
-			animation: gradient-animation 5s ease infinite;
+      transition: 0.2s;
+      animation: gradient-animation 5s ease infinite;
 
-			opacity: 0;
-			background: linear-gradient(220deg,$color-red, $color-orange);
-			background-size: 400% 400%;
-			;
-		}
+      opacity: 0;
+      background: linear-gradient(220deg, $color-red, $color-orange);
+      background-size: 400% 400%;
+    }
 
-		&:hover {
-			color: $color-bright;
+    &:hover {
+      transform: translateY(-1rem);
+      color: $color-bright;
+      box-shadow: 0 1rem 10px 5px rgba($color: $color-dark, $alpha: 0.2);
 
-			&::before {
-				opacity: 1;
-			}
+      &::before {
+        opacity: 1;
+      }
 
-			.card_img-bw {
-				opacity: 0;
-			}
+      .card__img-bw {
+        opacity: 0;
+      }
 
-			.card_img-clr {
-				opacity: 1;
-			}
-		}
+      .card__img-clr {
+        opacity: 1;
+      }
+    }
 
-		> img {
-			width: 120px;
-			height: 120px;
+    img {
+      position: absolute;
+      width: 120px;
+      height: 120px;
 
-			transition: .2s;
-		}
+      transition: 0.2s;
+    }
 
-		.card_img-bw {
-			z-index: 2;
+    .card__icon {
+      width: 120px;
+      height: 120px;
+      display: flex;
+    }
 
-			opacity: 1;
-		}
+    .card__img-bw {
+      z-index: 2;
+      opacity: 1;
+    }
 
-		.card_img-clr {
-			z-index: 6;
+    .card__img-clr {
+      z-index: 6;
+      opacity: 0;
+    }
 
-			position: absolute;
+    .card__title {
+      z-index: 3;
 
-			opacity: 0;
-		}
+      transition: 0.2s;
+      letter-spacing: 0.1rem;
 
-		.card_title {
-			z-index: 3;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
 
-			margin: 1rem 0;
+    .card__list {
+      z-index: 4;
 
-			transition: .2s;
-			letter-spacing: .1rem;
+      transition: 0.2s;
+      letter-spacing: 0.02rem;
 
-			font-size: 1.4rem;
-			font-weight: 300;
-		}
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+    }
 
-		.card_list {
-			z-index: 4;
+    .card__link {
+      z-index: 5;
 
-			margin: 0 0 1rem 0;
+      transition: 0.2s;
+      text-decoration: underline;
+      letter-spacing: 0.01rem;
 
-			transition: .2s;
-			letter-spacing: .01rem;
-
-			font-size: 1rem;
-			font-weight: 300;
-			line-height: 1.4rem;
-		}
-
-		.card_link {
-			z-index: 5;
-
-			transition: .2s;
-			text-decoration: underline;
-			letter-spacing: .01rem;
-
-			font-size: 1rem;
-			font-weight: 400;
-			line-height: 1.4rem;
-		}
-	}
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+    }
+  }
 }
