@@ -18,23 +18,29 @@ w.addEventListener("resize", () => (windowHeight = w.innerHeight))
 // Parralax effects on scroll
 const scrollHandler = () => {
   const _scrollTop = w.scrollY // Storing scroll position
-  
+
   // Hero video has to be paused when scrolled down for the high of 2x viewport
   if (_scrollTop > windowHeight * 2 && !heroVideo.paused) heroVideo.pause()
   else if (_scrollTop <= windowHeight * 2 && heroVideo.paused) heroVideo.play()
 
-// Navigation drops down after scrolled down for 200px
-if (_scrollTop >= 200 && !navContainer.classList.contains("dropped"))
-navContainer.classList.add("dropped")
-else if (_scrollTop < 200 && navContainer.classList.contains("dropped"))
-navContainer.classList.remove("dropped")
+  // Navigation drops down after scrolled down for 200px
+  if (_scrollTop >= 200 && !navContainer.classList.contains("dropped"))
+    navContainer.classList.add("dropped")
+  else if (_scrollTop < 200 && navContainer.classList.contains("dropped"))
+    navContainer.classList.remove("dropped")
 
-// Parallex NavLinks unless page scrolled down for 200px, then stick to top.
-navLinks.setAttribute(
-  "style",
-  `top: ${_scrollTop <= 200 ? 50 - _scrollTop * 0.25 : 0}px`
+  // Parallex NavLinks unless page scrolled down for 200px, then stick to top.
+  navLinks.setAttribute(
+    "style",
+    `top: ${_scrollTop <= 200 ? 50 - _scrollTop * 0.25 : 0}px`
   )
-  
+
+  // Hero section parallex effect unless scrolled full page down
+  if (_scrollTop <= windowHeight) {
+    heroLogo.setAttribute("style", `top: ${_scrollTop * 0.4}px`)
+    heroParagraph.setAttribute("style", `top: ${_scrollTop * 0.3}px`)
+  }
+
   // if (_scrollTop < 200)
   //   changer.setTop(navLinks, `${_scrollTop * -0.25 + 100}px`)
   // else if (navLinks.style.top != "0px") changer.setTop(navLinks, "0px")
@@ -43,7 +49,7 @@ navLinks.setAttribute(
   //   changer.setTop(heroLogo, `${_scrollTop * 0.6}px`)
   //   changer.setTop(heroParagraph, `${_scrollTop * 0.5}px`)
   // }
-  
+
   // changer.setTop(serviceVideo, `${_scrollTop - viewportHeight}px`)
 }
 scrollHandler()
@@ -75,52 +81,3 @@ teamCards.forEach((element, index) => {
     })
   }
 })
-
-
-// // Smooth scroll to section
-// navLinksArray.forEach((element, index) => {
-//   element.addEventListener("click", () => {
-//     event.preventDefault();
-//     w.scrollTo({
-//       top: changer.calculateTop(sectionsArray[index]) - (index === 0 ? 0 : 60),
-//       behavior: "smooth",
-//     });
-//     return false;
-//   });
-// });
-
-// // Starting Top Section hero-video and service-video at the same time!
-// let videoCounter = 0;
-// topSectionVideosArray.forEach((element) => {
-//   _videoPlaySynched = () => {
-//     videoCounter++;
-//     if (videoCounter === topSectionVideosArray.length) {
-//       videoCounter = 0;
-//       topSectionVideosArray.forEach((element) => {
-//         element.play();
-//       });
-//     }
-//   };
-//   // Below I'm checking if current video is cached, if not i add event listener.
-//   if (element.readyState === 4) {
-//     _videoPlaySynched();
-//   }
-//   element.addEventListener("canplaythrough", _videoPlaySynched);
-//   element.addEventListener("ended", _videoPlaySynched);
-// });
-
-// // Google Map thingi
-// w.initMap = function initMap() {
-//   let location = {
-//     lat: 43.25,
-//     lng: 76.95,
-//   };
-//   let map = new google.maps.Map(contactsMap, {
-//     zoom: 14,
-//     center: location,
-//   });
-//   let marker = new google.maps.Marker({
-//     position: location,
-//     map: map,
-//   });
-// };
